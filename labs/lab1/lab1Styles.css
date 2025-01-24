@@ -1,0 +1,33 @@
+#oneTreeDiv {
+    width: 50%;
+    background-color: pink;
+}
+
+.multiTreeDiv {
+    width: 75%;
+    background-color: cyan;
+}
+
+#randTreeDiv {
+    width: 90%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+hr {
+    width: 100%;
+}
+
+div {
+    font-size: 98%;
+    line-height: 0.55;
+    color: red;
+    text-align: center;
+    display: inline-flex;
+    justify-content: space-around;
+    padding: 5px;
+}

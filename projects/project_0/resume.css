@@ -1,0 +1,14 @@
+h4 {
+
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.italic-span {
+    font-style: italic;
+}
+
+div{
+    display: flex;
+    justify-content: space-between;
+}
