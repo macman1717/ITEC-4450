@@ -16,6 +16,10 @@ error_reporting(E_ALL);
 <h2>Form Example 3 - Using post method, trigger self</h2>
 
 <?php
+$name = "";
+$comment = "";
+$email = "";
+
 $nameError = "";
 $commentError = "";
 $emailError = "";
