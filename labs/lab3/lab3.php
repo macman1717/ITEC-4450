@@ -64,10 +64,6 @@ $questions = [
     ]
 ];
 
-for($i = 0; $i < count($questions); $i++) {
-    $img_url[$i] = "blank.jpg";
-}
-
 if ($form_submitted) {
     $i = 0;
     foreach ($answerKey as $q => $correctAnswer) {
