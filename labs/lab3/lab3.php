@@ -1,6 +1,7 @@
 <?php
 error_reporting(E_ALL);
 $form_submitted = $_SERVER["REQUEST_METHOD"] == "POST";
+$questionsAnswered = $questionsCorrect = 0;
 
 $answerKey = [
     "q1" => "c", "q2" => "b", "q3" => "a",
@@ -70,10 +71,14 @@ for($i = 0; $i < count($questions); $i++) {
 if ($form_submitted) {
     $i = 0;
     foreach ($answerKey as $q => $correctAnswer) {
-        if (isset($_POST[$q]) && $_POST[$q] == $correctAnswer) {
-            $img_url[$i] = "checkmark.png";
-        } else {
-            $img_url[$i] = "xmark.jpg";
+        if(isset($_POST[$q])) {
+            $questionsAnswered++;
+            if ($_POST[$q] == $correctAnswer) {
+                $questionsCorrect++;
+                $img_url[$i] = "checkmark.png";
+            } else {
+                $img_url[$i] = "xmark.jpg";
+            }
         }
         $i++;
     }
@@ -91,6 +96,18 @@ if ($form_submitted) {
 <h1>Lab 3 - Jan 30, 2025</h1>
 <p>Submitted by Connor Griffin</p>
 <hr>
+
+<?php
+if ($form_submitted) {
+    if($questionsAnswered == count($questions)) {
+        $scoreOutOf100 = round($questionsCorrect * (100 / count($questions)),2);
+        echo "<span id='score-message'>Your score is : $scoreOutOf100/100</span>";
+    }else{
+        echo "<span id='error-message'>Please answer all questions before submitting the form.</span>";
+        $form_submitted = false;
+    }
+}
+?>
 
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
     <?php
@@ -120,7 +137,7 @@ if ($form_submitted) {
     ?>
 
     <br>
-    <input type="submit">
+    <input type="submit" id="submit-btn">
 </form>
 
 </body>

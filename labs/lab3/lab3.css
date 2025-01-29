@@ -6,3 +6,19 @@ img {
 .question {
     display: inline-flex;
 }
+
+#error-message {
+    font-size: 40px;
+    color: red;
+}
+
+#score-message {
+    font-size: 40px;
+    color: green;
+}
+
+#submit-btn{
+    width: 500px;
+    height: 50px;
+    font-size: 40px;
+}
