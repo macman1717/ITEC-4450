@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 $firstname="Firstname";
 $lastname="Lastname";
@@ -84,15 +85,27 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $levelErr = "Level is required";
         $flag++;
     }
-
+    $emailInUse = false;
     //end of POST if statements
     if($flag == 0){
         include "connection.php";
-        $sqs = "INSERT INTO users(firstname, lastname, email, phone, gender, level, password)
+        $sqs = 'SELECT * FROM  users  WHERE email = "'.$email.'"';
+        $qresult = mysqli_query($dbc, $sqs);
+        $num = mysqli_num_rows($qresult);
+
+        //add logic for checking if duplicate phone num
+
+        if($num > 0){
+            $emailInUse = true;
+        }else {
+            $sqs = "INSERT INTO users(firstname, lastname, email, phone, gender, level, password)
                 VALUES ('$firstname', '$lastname', '$email', '$phone', '$gender', '$level', '$password1');";
-        mysqli_query($dbc, $sqs);
-        $registered= mysqli_affected_rows($dbc);
-        echo($registered);
+            mysqli_query($dbc, $sqs);
+            $registered = mysqli_affected_rows($dbc);
+            mysqli_close($dbc);
+            header("Location:register_success.php");
+            exit();
+        }
     }
 }
 
@@ -102,6 +115,8 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
+
+ob_end_flush();
 ?>
 
 <!DOCTYPE html>
@@ -122,6 +137,8 @@ function test_input($data) {
     <li>insert form information into database table</li>
 </ul>
 <hr>
+
+<?php if($emailInUse) echo "<h3>Sorry, an account with $email has already been registered.</h3>"; ?>
 
 <h2>Registration Form</h2>
 
