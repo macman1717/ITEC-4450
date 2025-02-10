@@ -90,10 +90,10 @@ if ($form_submitted) {
 <head>
     <link rel="stylesheet" href="lab4.css">
     <meta charset="UTF-8">
-    <title>Lab 3</title>
+    <title>Lab 4</title>
 </head>
 <body>
-<h1>Lab 3 - Jan 30, 2025</h1>
+<h1>Lab 4 - Jan 30, 2025</h1>
 <p>Submitted by Connor Griffin</p>
 <hr>
 
