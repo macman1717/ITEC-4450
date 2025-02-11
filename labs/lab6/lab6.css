@@ -1,3 +1,65 @@
 .error-message {
     color: red;
 }
+.reqText{
+    color: red;
+}
+
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #E5E5E5;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    font-family: sans-serif;
+}
+header{
+    text-align: center;
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+form {
+    flex-direction: column;
+}
+
+.form-fields{
+    padding: 16px;
+    background-color: white;
+}
+
+nav a{
+    text-decoration: none;
+    color: #284550;
+}
+
+a{
+    font-size: 1.5em;
+}
+
+input{
+    margin-bottom: 10px;
+}
+
+
+#submit-btn{
+    width: 50px
+}
+
+footer{
+    max-width: 100%;
+    width: 100%;
+}
+img{
+    max-width: 100%;
+    width: 100%;
+}
