@@ -90,11 +90,15 @@ foreach ($errorMessages as $message) {
         makeTextInputField("Last Name", "last_name", true);
         makeTextInputField("First Name", "first_name", true);
 
+        $maleSelect = "";
+        $femaleSelect = "";
+        isset($_POST["gender"]) && $_POST["gender"] = "Male" ? $maleSelect = "checked" : $femaleSelect = "checked";
+
         echo '<label for="gender">Gender<span class="reqText">*</span> :</label>';
         echo '<label for="male">Male</label>';
-        echo '<input type="radio" name="gender" id="male" value="male">';
+        echo '<input type="radio" name="gender" id="male" value="male" '.$maleSelect.'>';
         echo '<label for="female">Female</label>';
-        echo '<input type="radio" name="gender" id="female" value="female"><br>';
+        echo '<input type="radio" name="gender" id="female" value="female" '.$femaleSelect.'><br>';
 
 
         makeTextInputField("Affiliation/Recommended by", "recommendation", true);
