@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="hands-on-styles/activity-7.css">
+    <meta charset="UTF-8">
+    <title>Activity 10 - Admin Manage Users</title>
+    <style>
+        .error {color:#FF0000;}
+    </style>
+</head>
+<body>
+<h2>Welcome to the Admin - Manage User Page</h2>
+
+<?php
+include "admin_nav.php";
+
+include "connection.php";
+$sqs = "SELECT * FROM users order by firstname asc";
+$result = mysqli_query($dbc, $sqs);
+
+echo "<table border='1' width='50%'>";
+echo "<tr>";
+echo "<th>edit</th>";
+echo "<th>delete</th>";
+echo "<th>Firstname</th>";
+echo "<th>Lastname</th>";
+echo "<th>Phone</th>";
+echo "<th>Email</th>";
+echo "<th>Gender</th>";
+echo "<th>Level</th>";
+echo "<th>PW</th>";
+echo "</tr>";
+
+while($row = mysqli_fetch_array($result)){
+    echo "<tr>";
+    echo "<td><a href='admin_edit.php?id=".$row['id']."'>Edit</a></td>";
+    echo "<td><a href='admin_delete.php?id=".$row['id']."'>Delete</a></td>";
+    echo "<td>".$row['firstname']."</td>";
+    echo "<td>".$row['lastname']."</td>";
+    echo "<td>".$row['phone']."</td>";
+    echo "<td>".$row['email']."</td>";
+    echo "<td>".$row['gender']."</td>";
+    echo "<td>".$row['level']."</td>";
+    echo "<td>".$row['password']."</td>";
+    echo "</tr>";
+}
+
+?>
+
+
+</body>
+</html>
+
