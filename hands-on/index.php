@@ -19,8 +19,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if($numrows == 1){
         $row = mysqli_fetch_array($result);
         $loginMessage = "login success, welcome to our site ".$row['firstname'];
+        $user_type = $row['user_type'];
         mysqli_close($dbc);
-        header("location:user_home.php");
+        if($user_type==0){
+            header("Location:admin_home.php");
+        }else{
+            header("location:user_home.php");
+        }
+
         exit();
     }else{
         $loginMessage = "Invalid username or password"; //purposely ambiguous for security reasons

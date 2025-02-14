@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="hands-on-styles/activity-7.css">
     <meta charset="UTF-8">
-    <title>Activity 10 - Admin Manage Users</title>
+    <title>Activity 11 - Admin Manage Users</title>
     <style>
         .error {color:#FF0000;}
     </style>

@@ -12,7 +12,7 @@
 <p align="center">
     <a href="">Home</a>
     |
-    <a href="activity10.php">Manage Users</a>
+    <a href="activity11.php">Manage Users</a>
     |
     <a href="">Logout</a>
 
