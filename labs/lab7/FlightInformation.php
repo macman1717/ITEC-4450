@@ -35,8 +35,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $post_data = [];
 
     foreach($fields as $field){
-        $_POST[$field] = clean($_POST[$field]);
         if(isset($_POST[$field])){
+            $_POST[$field] = clean($_POST[$field]);
             if(!$_POST[$field] == ""){
                 $post_data[$field] = $_POST[$field];
                 unset($errors[$field]);
