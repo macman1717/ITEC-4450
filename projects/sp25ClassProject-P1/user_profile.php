@@ -1,11 +1,29 @@
 <?php
-ob_start();
+session_start();
+//populate the form using information received from the database
+$id = $_SESSION['id'];
 
-$firstname="Firstname";
-$lastname="Lastname";
-$phone="111-222-3333";
-$email = "example@ggc.edu";
-$gender = $level = $password1 = $password2 = "";
+
+include "connection.php";
+$sql = "SELECT * FROM users WHERE id = $id;";
+$result = mysqli_query($dbc, $sql);
+$numrows = mysqli_num_rows($result);
+
+$row = mysqli_fetch_array($result);
+$firstname = $row['firstname'];
+$lastname = $row['lastname'];
+$phone = $row['phone'];
+$gender = $row['gender'];
+$level = $row['level'];
+
+?>
+
+<?php
+//once user clicked submit button
+//check the flag == 0
+//update the database
+
+
 $flag = 0; // 0 when no red flags exist and form ready to insert
 
 $firstNameError=$lastNameError=$emailError=$genderErr=$levelErr=$phoneNumError=$passwordError= "*";
@@ -14,9 +32,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $firstname = test_input($_POST["firstname"]);
     $lastname = test_input($_POST["lastname"]);
     $phone = test_input($_POST["phone"]);
-    $email = test_input($_POST["email"]);
-    $password1 = test_input($_POST["password1"]);
-    $password2 = test_input($_POST["password2"]);
     if(isset($_POST["gender"])){
         $gender = $_POST["gender"];
     }
@@ -47,24 +62,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         echo "$lastname <br>";
     }
 
-    if($email == "example@ggc.edu" || $email == ""){
-        $emailError = "Email is required";
-        $flag++;
-    }else{
-        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-            $emailError = "Invalid email format";
-            $flag++;
-        }
-        echo "Your Email is $email <br>";
-    }
-
-    if($password1 == ""){
-        $passwordError = "Password is required";
-        $flag++;
-    }else if($password1 != $password2){
-        $passwordError = "Passwords do not match";
-        $flag++;
-    }
 
     if($phone == "111-222-3333" || $phone == ""){
         $phoneNumError = "Phone number is required";
@@ -85,27 +82,22 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $levelErr = "Level is required";
         $flag++;
     }
-    $emailInUse = false;
     //end of POST if statements
     if($flag == 0){
-        include "connection.php";
-        $sqs = 'SELECT * FROM  users  WHERE email = "'.$email.'"';
-        $qresult = mysqli_query($dbc, $sqs);
-        $num = mysqli_num_rows($qresult);
 
-        //add logic for checking if duplicate phone num
+        $sqs = "UPDATE users
+                SET firstname = '$firstname',
+                    lastname = '$lastname',
+                    phone = '$phone',
+                    gender = '$gender',
+                    level = '$level'
+                WHERE id = $id;";
+        mysqli_query($dbc, $sqs);
+        $registered = mysqli_affected_rows($dbc);
+        mysqli_close($dbc);
+        header("Location:user_home.php");
+        exit();
 
-        if($num > 0){
-            $emailInUse = true;
-        }else {
-            $sqs = "INSERT INTO users(firstname, lastname, email, phone, gender, level, password)
-                VALUES ('$firstname', '$lastname', '$email', '$phone', '$gender', '$level', '$password1');";
-            mysqli_query($dbc, $sqs);
-            $registered = mysqli_affected_rows($dbc);
-            mysqli_close($dbc);
-            header("Location:register_success.php");
-            exit();
-        }
     }
 }
 
@@ -115,40 +107,21 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
-
-ob_end_flush();
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <link rel="stylesheet" href="hands-on-styles/activity-7.css">
-    <meta charset="UTF-8">
-    <title>Activity 8 - updated</title>
+    <title>Online Test - User Update Profile</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Activity 8 - updated Jan 31, 2025</h1>
-<p>Submitted by Connor Griffin</p>
-<h2>Major Updates</h2>
-<ul>
-    <li>Create database and table in phpmyadmin</li>
-    <li>add password field</li>
-    <li>create connection.php</li>
-    <li>insert form information into database table</li>
-</ul>
-<hr>
-
-<?php if($emailInUse) echo "<h3>Sorry, an account with $email has already been registered.</h3>"; ?>
-
-<h2>Registration Form</h2>
+<?php include "user_nav.php" ?>
+<h3>Feel Free to Update Your Personal Information Here</h3>
 
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
     Firstname : <input type= "text" name="firstname" value="<?php echo $firstname; ?>"> <span class="error"> <?php echo "$firstNameError";?> </span><br> <br>
     Lastname : <input type= "text" name="lastname" value="<?php echo $lastname; ?>"> <span class="error"> <?php echo "$lastNameError";?> </span><br> <br>
     Phone Number: <input type="text" name="phone" value="<?php echo $phone; ?>">  <span class="error"> <?php echo "$phoneNumError";?> </span><br> <br>
-    Email: <input type="text" name="email" value="<?php echo $email; ?>">  <span class="error"> <?php echo "$emailError";?> </span><br> <br>
-    Password: <input type="password" name="password1" maxlength="30"> <span class="error"> <?php echo "$passwordError";?> </span><br><br>
-    Confirm Password: <input type="password" name="password2" maxlength="30"><span class="error">*</span><br><br>
 
     Gender: <input type="radio" name="gender" value="Female" <?php if($gender=="Female") echo "checked"; ?> > Female
     <input type="radio" name="gender" value="Male" <?php if($gender=="Male") echo "checked"; ?> > Male
@@ -166,21 +139,6 @@ ob_end_flush();
 
     <input type="submit">
 </form>
-<hr>
-<h3>Testing Area: For Developer Only</h3>
-<?php
 
-echo "Data collected from the form: <br>";
-echo "First name: $firstname <br>";
-echo "Last name: $lastname <br>";
-echo "Phone num: $phone <br>";
-echo "Email: $email <br>";
-echo "Gender: $gender <br>";
-echo "Level: $level <br>";
-echo "Password1: $password1 <br>";
-echo "Password2: $password2 <br>";
-echo "# of red flags: $flag <br>";
-
-?>
 </body>
 </html>

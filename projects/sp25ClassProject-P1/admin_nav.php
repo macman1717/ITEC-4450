@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="hands-on-styles/activity-7.css">
+    <link rel="stylesheet" href="../../hands-on/hands-on-styles/activity-7.css">
     <meta charset="UTF-8">
     <title>Admin - Nav</title>
     <style>

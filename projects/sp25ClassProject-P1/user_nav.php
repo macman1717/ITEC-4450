@@ -3,7 +3,7 @@
 <p align="center">
     <a href="user_home.php"> Home </a>
     |
-    <a> Update Profile </a>
+    <a href="user_profile.php"> Update Profile </a>
     |
     <a> Take PHP Quiz </a>
     |
@@ -13,7 +13,7 @@
     |
     <a> Check Test Result </a>
     |
-    <a> Logout</a>
+    <a href="logout.php"> Logout</a>
 </p>
 </body>
 </html>

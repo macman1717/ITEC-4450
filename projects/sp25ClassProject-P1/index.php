@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 ob_start();
 $loginMessage = "";
 function test_input($data) {
@@ -19,7 +21,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if($numrows == 1){
         $row = mysqli_fetch_array($result);
         $loginMessage = "login success, welcome to our site ".$row['firstname'];
+        $dbfirstname=$row['firstname'];
         $user_type = $row['user_type'];
+        $_SESSION['id'] = $row['id'];
+        $_SESSION["email"] = $email;
+        $_SESSION["firstname"] = $dbfirstname;
         mysqli_close($dbc);
         if($user_type==0){
             header("Location:admin_home.php");
@@ -38,7 +44,7 @@ ob_end_flush();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="hands-on-styles/activity-7.css">
+    <link rel="stylesheet" href="../../hands-on/hands-on-styles/activity-7.css">
     <meta charset="UTF-8">
     <title>Activity 10</title>
 </head>
