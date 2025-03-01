@@ -87,15 +87,15 @@ sfdfd	sdf@ggc.edu	Digital Media	0	24.99.247.234
 sfdfd	sdf@ggc.edu	Digital Media	0	24.99.247.234
 sdf	jgdfg@gfdg.com	Digital Media	100	4.15.179.163
 goku	virginia@saiyan.popo	Digital Media	0	96.231.195.176
+goku	ui@live.com	Digital Media	0	96.231.195.176
+goku	ui@live.com	Digital Media	50	96.231.195.176
 sdf	jgdfg@gfdg.com	Digital Media	100	4.15.179.163
 sdf	jgdfg@gfdg.com	Digital Media	100	4.15.179.163
 sdf	lokinkl@fff.com	Digital Media	100	4.15.179.163
-goku	ui@live.com	Digital Media	0	96.231.195.176
 sdf	lokinkl@fff.com	Digital Media	100	50.167.67.245
 sdf	lokinkl@fff.com	Digital Media	100	50.167.67.245
 Bria  Rivers	brivers@ggc.edu	Digital Media	100	24.125.233.10
 sdf	lokinkl@fff.com	Digital Media	100	50.167.67.245
-goku	ui@live.com	Digital Media	50	96.231.195.176
 Jack Cantrell	jcantr13@gmail.com	Digital Media	100	50.160.207.11
 Jack Cantrell	jcantr13@gmail.com	Digital Media	100	50.160.207.11
 Jack Cantrell	jcantr13@gmail.com	Digital Media	100	50.160.207.11
