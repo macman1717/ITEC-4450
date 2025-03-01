@@ -1,0 +1,195 @@
+afas	bbb@abc.com	Digital Media	100	24.125.138.102
+rrrrrrr	bbb@abc.com	Security	25	24.125.138.102
+wwwww	eeee@abc.com	Other	75	24.125.138.102
+dfg	slai@ggc.edu	Business	50	24.125.138.102
+john	asdf@hotmail.com	Software	50	168.28.22.146
+Some Guy	internet@internet.com	Business	100	168.28.22.146
+Alex Bui	inspiritsj93@gmail.com	Digital Media	100	168.28.22.146
+asdf	asdf@ggc.edu	Digital Media	0	50.147.203.70
+asdf	asdf@ggc.edu	Digital Media	25	50.147.203.70
+asdf	asdf@ggc.edu	Digital Media	25	50.147.203.70
+sdf	asdf@ggc.edu	Digital Media	25	50.147.203.70
+sdf	asdf@ggc.edu	Digital Media	25	50.147.203.70
+asdf	asdf@ggc.edu	Digital Media	100	50.147.203.70
+asdf	asdf@ggc.edu	Software	0	50.147.203.70
+asdf	asdf@ggc.edu	Digital Media	0	50.147.203.70
+asdf	asdf@ggc.edu	Business	0	50.147.203.70
+asdf	asdf@ggc.edu	Security	100	50.147.203.70
+Carlos	cmunoz1@ggc.edu	Digital Media	100	168.28.22.146
+Carlos	cmunoz1@ggc.edu	Digital Media	75	168.28.22.146
+Carlos	cmunoz1@ggc.edu	Digital Media	50	168.28.22.146
+Dude	who@gmail.com	Digital Media	75	168.28.22.146
+Dude	who@gmail.com	Digital Media	100	168.28.22.146
+hello	ggg@ggc.edu	Digital Media	50	168.28.22.146
+hello	ggg@ggc.edu	Digital Media	50	168.28.22.146
+carlos	cmunoz1@ggc.edu	Digital Media	100	168.28.22.146
+carlos	cmunoz1@ggc.edu	Digital Media	75	168.28.22.146
+carlos	cmunoz1@ggc.edu	Digital Media	75	168.28.22.146
+carlos	cmunoz1@ggc.edu	Digital Media	0	168.28.22.146
+carlos	cmunoz1@ggc.edu	Digital Media	0	168.28.22.146
+Alvin	ajean1@ggc.edu	Digital Media	25	67.191.235.51
+Alvin	ajean1@ggc.edu	Digital Media	100	67.191.235.51
+carlos	cmunoz1@ggc.edu	Digital Media	0	99.141.154.74
+carlos	cmunoz1@ggc.edu	Digital Media	25	99.141.154.74
+asdasda	inspiritsj93@gmail.com	Security	0	98.192.41.27
+asdasda	inspiritsj93@gmail.com	Security	0	98.192.41.27
+asdasda	inspiritsj93@gmail.com	Security	100	98.192.41.27
+Cameron	irishfire777@gmail.com	Digital Media	100	24.98.54.89
+Cameron	irishfire777@gmail.com	Digital Media	0	24.98.54.89
+Cameron	irishfire777@gmail.com	Digital Media	75	24.98.54.89
+Cameron	irishfire777@gmail.com	Digital Media	75	24.98.54.89
+Cameron	irishfire777@gmail.com	Digital Media	100	24.98.54.89
+Cameron	irishfire777@gmail.com	Digital Media	100	24.98.54.89
+Cameron	irishfire777@gmail.com	Digital Media	0	24.98.54.89
+Cameron	irishfire777@gmail.com	Digital Media	0	24.98.54.89
+Karl Kraus	jedikarlkraus@bellsouth.net	Software	100	108.74.190.25
+Karl Kraus	jedikarlkraus@bellsouth.net	Software	75	108.74.190.25
+Karl Kraus	jedikarlkraus@bellsouth.net	Software	50	108.74.190.25
+test	test@test.com	Digital Media	0	1.23.124.249
+test	test@test.com	Digital Media	25	1.23.124.249
+ertyui	abc@ggc.edu	Business	100	172.56.5.105
+Fahd Quadri	fquadri@ggc.edu	Digital Media	100	172.56.4.213
+Cameron	irishfire777@gmail.com	Digital Media	0	50.200.84.128
+Karl Kraus	jedikarlkraus@bellsouth.net	Software	50	108.74.190.25
+sam	smedina2@ggc.edu	Other	100	168.28.22.10
+f	oh@ggc.edu	Digital Media	0	168.28.2.98
+ertyui	abc@ggc.edu	Digital Media	0	172.56.5.190
+ladjkadjlkadsjdlk	skksdjk@ggc.edu	Digital Media	25	168.28.22.41
+ladjkadjlkadsjdlk	skksdjk@ggc.edu	Software	100	168.28.22.41
+abc	abc@ggc.edu	Digital Media	75	168.28.2.98
+&lt;span style=&quot;color:red&quot;&gt;Someone&lt;/span&gt;	mail@ggc.com	Digital Media	0	168.28.22.59
+asdfas	abc@ggc.edu	Digital Media	0	168.28.22.26
+Samuel CHang	sam_Chang_79@yahoo.com	Digital Media	75	168.28.22.36
+Samuel CHang	sam_Chang_79@yahoo.com	Other	75	168.28.22.36
+abc	abc@ggc.edu	Digital Media	0	168.28.22.26
+asdfa	abc@ggc.edu	Digital Media	0	168.28.22.26
+sometest@test.com	sometest@test.com	Software	50	1.22.194.167
+sadf	aasd@ggc.edu	Digital Media	25	50.167.67.245
+sadf	aasd@ggc.edu	Security	25	50.167.67.245
+Jacob	jfagan@ggc.edu	Software	100	168.28.22.40
+Devora Lorenzo	devora.lorenzo@yahoo.com	Digital Media	25	168.28.22.44
+potato	potato@mail.com	Digital Media	50	168.28.22.103
+Devora Lorenzo	devora.lorenzo@yahoo.com	Digital Media	0	168.28.22.44
+Dude	who@gmail.com	Digital Media	100	168.28.22.34
+Dude	who@gmail.com	Digital Media	0	168.28.22.34
+test	test@test.com	Software	0	1.22.88.169
+test	test@test.com	Software	0	1.22.88.169
+asdfa	abc@ggc.edu	Digital Media	0	168.28.22.120
+Rodny Joseph	rodnyjoseph92@gmail.com	Digital Media	25	24.99.50.110
+kuhku	rodnyjoseph92@gmail.com	Digital Media	0	24.99.50.110
+kuhku	rodnyjoseph92@gmail.com	Digital Media	0	24.99.50.110
+kuhku	rodnyjoseph92@gmail.com	Digital Media	25	24.99.50.110
+kuhku	rodnyjoseph92@gmail.com	Digital Media	50	24.99.50.110
+kuhku	rodnyjoseph92@gmail.com	Digital Media	50	24.99.50.110
+dfgdf	dfgdfg@dgd.com	Software	0	24.159.127.238
+Travis Keating	tkeating@ggc.edu	Digital Media	25	96.32.85.89
+sfdfd	sdf@ggc.edu	Digital Media	0	24.99.247.234
+sfdfd	sdf@ggc.edu	Digital Media	0	24.99.247.234
+sdf	jgdfg@gfdg.com	Digital Media	100	4.15.179.163
+goku	virginia@saiyan.popo	Digital Media	0	96.231.195.176
+sdf	jgdfg@gfdg.com	Digital Media	100	4.15.179.163
+sdf	jgdfg@gfdg.com	Digital Media	100	4.15.179.163
+sdf	lokinkl@fff.com	Digital Media	100	4.15.179.163
+goku	ui@live.com	Digital Media	0	96.231.195.176
+sdf	lokinkl@fff.com	Digital Media	100	50.167.67.245
+sdf	lokinkl@fff.com	Digital Media	100	50.167.67.245
+Bria  Rivers	brivers@ggc.edu	Digital Media	100	24.125.233.10
+sdf	lokinkl@fff.com	Digital Media	100	50.167.67.245
+goku	ui@live.com	Digital Media	50	96.231.195.176
+Jack Cantrell	jcantr13@gmail.com	Digital Media	100	50.160.207.11
+Jack Cantrell	jcantr13@gmail.com	Digital Media	100	50.160.207.11
+Jack Cantrell	jcantr13@gmail.com	Digital Media	100	50.160.207.11
+Jack Cantrell	adhk@gmail.com	Digital Media	100	50.160.207.11
+jack	jcantr13@gmail.com	Digital Media	100	50.160.207.11
+Karl Kraus	jedikarlkraus@bellsouth.net	Digital Media	0	168.28.22.86
+Karl Kraus	jedikarlkraus@bellsouth.net	Digital Media	0	168.28.22.86
+Karl Kraus	jedikarlkraus@bellsouth.net	Digital Media	25	168.28.22.86
+dfg	dfghj@ghj.com	Digital Media	100	168.28.16.100
+Karina	who@gmail.com	Other	100	168.28.22.34
+sdf	lokinkl@fff.com	Digital Media	100	168.28.2.98
+asdf	asdf@ghjkl.com	Software	100	24.159.127.238
+Dude	who@gmail.com	Digital Media	100	168.28.22.34
+Dude	who@gmail.com	Digital Media	100	168.28.22.34
+Rebecca	R@ggc.edu	Digital Media	25	71.204.64.171
+Rebecca Tendean	rtendean@ggc.edu	Digital Media	0	71.204.64.171
+Rebecca Tendean	rtendean@ggc.edu	Digital Media	0	71.204.64.171
+Rebecca Tendean	rtendean@ggc.edu	Digital Media	25	71.204.64.171
+Rebecca Tendean	rtendean@ggc.edu	Digital Media	25	71.204.64.171
+Harry Potter	gryffindor@hogwarts.edu	Software	100	71.204.64.171
+sdf	lokinkl@fff.com	Digital Media	100	50.167.67.245
+sdf	lokinkl@fff.com	Digital Media	100	50.167.67.245
+sdf	lokinkl@fff.com	Digital Media	100	50.167.67.245
+abc	abc@ttt.com	Digital Media	25	168.28.2.98
+abc	abc@ttt.com	Digital Media	25	168.28.2.98
+abc	abc@ttt.com	Digital Media	25	168.28.2.98
+john joe	fdsa@asdf.com	Digital Media	75	168.28.22.88
+Fake	name@ggc.edu	Digital Media	50	168.28.22.58
+Joe	joe@gmail.com	Digital Media	0	168.28.22.93
+Miguel	lol@hotmail.com	Digital Media	100	168.28.22.96
+Mike	me@email.com	Software	100	168.28.22.50
+Fake	lcopas@ggc.edu	Digital Media	75	168.28.22.58
+Fake	lcopas@ggc.edu	Digital Media	100	168.28.22.58
+Joe	joe@gmail.com	Digital Media	0	168.28.22.93
+Mike	me@email.com	Software	100	168.28.22.50
+jeff	email@email.com	Software	100	168.28.22.55
+abf	afda@ggc.edu	Digital Media	0	168.28.2.98
+john joe	fdsa@asdf.com	Digital Media	75	168.28.22.88
+Gloria Alvarenga	galvaren@ggc.edu	Digital Media	100	168.28.22.49
+matthew	asda@ggc.edu	Business	75	168.28.22.49
+Precious West	pwest1@ggc.edu	Digital Media	75	168.28.22.87
+Mike	me@email.com	Software	100	168.28.22.50
+Arthur	arthur@ggc.edu	Digital Media	0	173.15.220.177
+Jeff G	jeff.graves43@gmail.com	Software	25	65.5.11.253
+a	asdf@a.com	Business	25	69.15.227.126
+a	asdf@a.com	Business	25	69.15.227.126
+a	asdf@a.com	Business	25	69.15.227.126
+YMENG	MENG@GGC.EDU	Digital Media	25	168.28.2.98
+a	dsa@da.com	Digital Media	0	107.167.116.228
+4r4	we@gm.edu	Digital Media	0	168.28.16.100
+4r4	we@gm.edu	Digital Media	0	168.28.16.100
+er	g@ggc.edu	Digital Media	25	96.32.85.3
+adf	adsf@ggc.edu	Digital Media	50	168.28.22.108
+asdfads	asdfadsf@gedfjg.casd	Security	75	168.28.22.108
+w	w@w.f	Digital Media	0	168.28.22.96
+aef	we@ffc.dfg	Digital Media	0	73.207.104.73
+a	a@a.com	Digital Media	0	24.125.222.199
+dfg	sdfg@something.edu	Security	25	97.81.103.76
+King Oruga	kingoruga@aol.com	Software	100	50.167.235.114
+King Oruga	kingoruga@aol.com	Software	75	50.167.235.114
+King Oruga	kingoruga@aol.com	Software	75	50.167.235.114
+dsf	adfawe@fsdv.eda	Digital Media	0	73.207.104.73
+dsf	adfawe@fsdv.eda	Digital Media	100	73.207.104.73
+Christan	cdeluna@ggc.edu	Software	100	157.166.173.5
+Chris	chris@ggc.edu	Digital Media	50	157.166.173.5
+Chris	chris@ggc.edu	Digital Media	50	157.166.173.5
+Chris	chris@ggc.edu	Digital Media	75	157.166.173.5
+jay dizzle	jguyen7@ggc.edu	Digital Media	25	168.28.22.95
+jay dizzle	jguyen7@ggc.edu	Digital Media	25	168.28.22.95
+jay win	jnguyen@ggc.edu	Digital Media	25	71.90.222.117
+jay win	jnguyen@ggc.edu	Digital Media	0	71.90.222.117
+Joe Cox	jcox8588@gmail.com	Digital Media	25	159.63.144.227
+Joe Cox	jcox8588@gmail.com	Digital Media	25	159.63.144.227
+Joe Cox	jcox8588@gmail.com	Digital Media	0	159.63.144.227
+blake	adslfk@ge.com	Digital Media	75	97.67.171.34
+blake	adslfk@ge.com	Digital Media	75	97.67.171.34
+mark	mark@ggc.edu	Digital Media	0	168.28.22.83
+mark	mark@ggc.e	Digital Media	0	168.28.22.83
+mark	mark@ggc.e	Security	25	168.28.22.83
+mark	mark@ggc.e	Security	50	168.28.22.83
+Adam Printz	printzadam@f.com	Digital Media	0	168.28.22.104
+Adam Printz	printzadam@f.com	Digital Media	0	168.28.22.104
+Margaret Muse	mmuse@ggc.edu	Digital Media	25	168.28.22.108
+mark	mark@ggc.e	Security	100	168.28.22.83
+Precious West	pwest1@ggc.edu	Digital Media	25	168.28.22.105
+Jim Coburn	jimrcoburn@gmail.com	Digital Media	100	168.28.22.32
+dwd	dwd@ggc.edu	Digital Media	100	168.28.22.32
+Carlan	chenry2@ggc.edu	Software	50	168.28.22.108
+Carlan	chenry2@ggc.edu	Software	50	168.28.22.108
+Carlan	chenry2@ggc.edu	Digital Media	75	168.28.22.108
+Jim Coburn	jimrcoburn@gmail.com	Digital Media	100	168.28.22.32
+mik	ign@i.com	Digital Media	50	168.28.22.100
+222	ytuvb@ggc.edu	Digital Media	50	75.131.196.162
+Miguel	a@a.com	Digital Media	0	75.131.192.68
+Miguel	a@a.com	Digital Media	0	75.131.192.68
+Dude	uiorweiot@gmail.com	Digital Media	83	168.28.2.98
+Dude	bbb@abc.com	asdffffff	81	24.125.138.5

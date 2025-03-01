@@ -1,0 +1,33 @@
+form{
+    font-family: sans-serif;
+    font-size: 30px;
+    color: #09122C;
+    width: 100%;
+    display: flex;
+}
+input{
+    background-color: #E17564;
+    color: #09122C;
+    height: 30px;
+    font-size: 25px;
+    width: 50%;
+}
+main{
+    width: 80%;
+}
+
+.radio-btn{
+    width: 15px;
+
+}
+
+p{
+    font-size: 20px;
+    font-style: italic;
+}
+
+.submit-btn{
+    width: 25%;
+    padding: 10px;
+    height: 50px;
+}
