@@ -31,3 +31,8 @@ p{
     padding: 10px;
     height: 50px;
 }
+
+select{
+    width: 30px;
+    background-color: #E17564;
+}

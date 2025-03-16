@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $isSubmitted = false;
 
 
@@ -8,8 +8,8 @@ $isSubmitted = false;
 function makeTextInputField($label, $name, $required) {
 
     $value = "";
-    if(isset($_POST[$name])){
-        $value = $_POST[$name];
+    if(isset($_SESSION[$name])){
+        $value = $_SESSION[$name];
     }
     $reqText = $required ? '<span class="reqText">*</span>' : '';
     echo "<label for='$name'>$label$reqText :</label>";
@@ -18,8 +18,8 @@ function makeTextInputField($label, $name, $required) {
 
 function makeSelectInputField($label, $name, $options, $required) {
     $selected = "";
-    if(isset($_POST[$name])){
-        $selected = $_POST[$name];
+    if(isset($_SESSION[$name])){
+        $selected = $_SESSION[$name];
     }
     $reqText = $required ? '<span class="reqText">*</span>' : '';
     echo "<label for='$name'>$label$reqText :</label>";

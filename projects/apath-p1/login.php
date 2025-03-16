@@ -18,6 +18,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $email = $row["email"];
             $password = $row["pw"];
             $type = $row["type"];
+            session_start();
+            $_SESSION["id"] = $row["id"];
             switch($type){
                 case 0: header("Location:admin/admin-profile.php"); break;
                 case 1: header("Location:volunteer/"); break;
@@ -60,8 +62,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             makeTextInputField("Email","email",true);
             makeTextInputField("Password","password",true);
             ?>
-
-
 
             <span><input class="radio-btn" type="checkbox" value="1" name="volunteer">Remember me <a href="">Forgot Password?</a></span>
 
