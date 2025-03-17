@@ -53,6 +53,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         makeTextInputField("First name", 'first_name', false);
         makeTextInputField("Last Name", 'last_name', false);
         makeTextInputField("Phone Number", 'phone', false);
+        makeTextInputField("School", 'school', false);
+        makeTextInputField("Major", 'major', false);
         ?>
         <br>
         <input class="submit-btn" type="submit" value="Save">
