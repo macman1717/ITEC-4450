@@ -4,7 +4,7 @@
         <a href="admin-profile.php">Personal Profile</a>
         <a href="">Create Announcement</a>
         <a href="admin-manage-students.php">Manage Students</a>
-        <a href="">Manage Volunteers</a>
+        <a href="admin-manage-volunteers.php">Manage Volunteers</a>
         <a href="../index.php">Logout</a><br>
     </nav>
     <br>
