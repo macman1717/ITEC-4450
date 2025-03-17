@@ -1,10 +1,10 @@
 <header>
-    <h1>APATH</h1>
+    <h1>APATH Student</h1>
     <nav>
         <a href="index.php">Home</a>
-        <a href="">Personal Profile</a>
-        <a href="">Flight Info</a>
+        <a href="student_profile.php">Personal Profile</a>
+        <a href="student_flight.php">Flight Info</a>
         <a href="">Pickup Information</a>
-        <a href="../index.php">Logout</a>
+        <a href="../logout.php">Logout</a>
     </nav>
 </header>

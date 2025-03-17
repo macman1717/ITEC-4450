@@ -5,10 +5,10 @@ include '../connection.php';
 include '../FormInputCreator.php';
 include '../helper_functions.php';
 try {
-    $v_id = $_SESSION['id'];
-    $result = mysqli_query($dbc, "SELECT * FROM apath_volunteer WHERE v_id = $v_id");
-    $volunteer = mysqli_fetch_assoc($result);
-    foreach ($volunteer as $key => $value) {
+    $s_id = $_SESSION['id'];
+    $result = mysqli_query($dbc, "SELECT * FROM apath_student WHERE s_id = $s_id");
+    $student = mysqli_fetch_assoc($result);
+    foreach ($student as $key => $value) {
         $_SESSION[$key] = $value;
     }
 }catch (Exception $e){
@@ -17,15 +17,15 @@ try {
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $data = array();
-    $sql = "UPDATE apath_volunteer SET ";
+    $sql = "UPDATE apath_student SET ";
+    $number_keys = ['car_year','car_capacity','car_storage'];
     foreach ($_POST as $key => $value) {
         $_SESSION[$key] = $value;
         $data[$key] = clean($value);
         $sql .= "$key = '$data[$key]', ";
-
     }
     $sql = substr($sql, 0, -2);
-    $sql .= " WHERE v_id = $v_id";
+    $sql .= " WHERE s_id = $s_id";
 
     $result = mysqli_query($dbc, $sql);
     if($result){
@@ -41,10 +41,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/forms.css">
     <meta charset="UTF-8">
-    <title>APATH - Volunteer Profile</title>
+    <title>APATH - Student Profile</title>
 </head>
 <body>
-<?php include 'volunteer-nav.php'; ?>
+<?php include 'student-nav.php'; ?>
 
 <div id="home-div">
     <h1>Please update your personal information</h1>
@@ -68,5 +68,3 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </footer>
 </body>
 </html>
-
-

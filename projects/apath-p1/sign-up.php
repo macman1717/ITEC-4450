@@ -22,6 +22,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if($errorMessage == ""){
         $sql = "INSERT INTO apath_users (email, pw, type) VALUES ('$email', '$password', $type)";
         $result = mysqli_query($dbc, $sql);
+        $sql = "SELECT * FROM apath_users WHERE email = '$email'";
+        $result = mysqli_query($dbc, $sql);
+        $row = mysqli_fetch_assoc($result);
+        $id = $row["id"];
+        switch($type){
+            case 1: $sql = "INSERT INTO apath_volunteer (v_id) VALUES ($id)"; break;
+            case 2: $sql = "INSERT INTO apath_student (s_id) VALUES ($id)"; break;
+        }
+        $result = mysqli_query($dbc, $sql);
         header("Location: login.php");
     }
 }

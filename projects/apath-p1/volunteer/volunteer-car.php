@@ -47,7 +47,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/forms.css">
     <meta charset="UTF-8">
-    <title>APATH - Volunteer Home</title>
+    <title>APATH - Car Information</title>
 </head>
 <body>
 <?php include 'volunteer-nav.php'; ?>
