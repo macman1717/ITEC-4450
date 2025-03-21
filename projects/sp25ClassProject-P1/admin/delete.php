@@ -6,6 +6,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $sql = "DELETE FROM users WHERE email='$email';";
     $dbc -> query($sql);
+    $sql = "DELETE FROM quiz_results WHERE user_id=$id;";
     if(mysqli_affected_rows($dbc)==1){
         echo "User deleted successfully";
     }else{

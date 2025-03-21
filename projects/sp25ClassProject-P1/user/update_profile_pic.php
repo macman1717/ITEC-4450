@@ -1,20 +1,23 @@
+<?php
+session_start();
+$id = $_SESSION['id'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="hands-on-styles/activity-7.css">
+    <link rel="stylesheet" href="../../../hands-on/hands-on-styles/activity-7.css">
     <meta charset="UTF-8">
-    <title>Activity 14</title>
+    <title>Profile Pic Update</title>
 </head>
 <body>
-<h1>Activity 14 - Feb 19, 2025</h1>
-<p>Submitted by Connor Griffin</p>
-<hr>
-<h1>Upload Files to Server</h1>
+<h1>Update New Profile Picture</h1>
+<h3>Current Profile Picture</h3>
+<img src="<?php echo "upload/".$id."-profile"; ?>" width="300">
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="multipart/form-data">
-    Select an image to upload for your profile picture: <input type="file" name="myImage"> <br> <br>
-    Select a PDF file to upload: <input type="file" name="myPdf"> <br> <br>
-
+    Select an image to upload: <input type="file" name="myImage"> <br> <br>
     <input type="submit" name="submit" value="UPLOAD">
+
+
 </form>
 
 </body>
@@ -24,12 +27,12 @@
 if(isset($_POST['submit'])){
     $tagName = "myImage";
     $fileAllowed = "PNG:JPEG:JPG:GIF:BMP:";
-    $sizeAllowed = 1000000;
+    $sizeAllowed = 10000000;
     $overwriteAllowed = 1;
-
     $file=uploadFile($tagName, $fileAllowed, $sizeAllowed, $overwriteAllowed);
     if($file!=false){
-        echo "<img src='".$file."' width='300'>";
+        $id = $_SESSION['id'];
+        echo "<img src='upload/$id-profile' width='300'>";
     }else{
         echo "Sorry, uploading of the image failed. <br>";
     }
@@ -39,8 +42,10 @@ function uploadFile($tagName, $fileAllowed, $sizeAllowed, $overwriteAllowed){
 
     $uploadOK=1;
     $dir = "upload/";
-    $file=$dir.basename($_FILES[$tagName]["name"]);
+    $id = $_SESSION['id'];
+    $file=$dir.basename($id."-profile");
     $fileType=pathinfo($file, PATHINFO_EXTENSION);
+    $file.=$fileType;
     $fileSize = $_FILES[$tagName]["size"];
 
     if($fileSize > $sizeAllowed){

@@ -1,32 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="hands-on-styles/activity-7.css">
-    <meta charset="UTF-8">
-    <title>Activity 14</title>
-</head>
-<body>
-<h1>Activity 14 - Feb 19, 2025</h1>
-<p>Submitted by Connor Griffin</p>
-<hr>
-<h1>Upload Files to Server</h1>
-<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="multipart/form-data">
-    Select an image to upload for your profile picture: <input type="file" name="myImage"> <br> <br>
-    Select a PDF file to upload: <input type="file" name="myPdf"> <br> <br>
+<?php
+session_start();
 
-    <input type="submit" name="submit" value="UPLOAD">
-</form>
+?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link rel="stylesheet" href="../../../hands-on/hands-on-styles/activity-7.css">
+        <meta charset="UTF-8">
+        <title>Profile Pic and Resume Update</title>
+    </head>
+    <body>
+    <h1>Update Profile Picture or Resume</h1>
+    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="multipart/form-data">
+        Select an image to upload: <input type="file" name="myImage"> <br> <br>
 
-</body>
-</html>
+        Select a PDF file to upload: <input type="file" name="myPdf"> <br> <br>
+
+        <input type="submit" name="submit" value="UPLOAD">
+
+
+    </form>
+
+    </body>
+    </html>
 
 <?php
 if(isset($_POST['submit'])){
     $tagName = "myImage";
-    $fileAllowed = "PNG:JPEG:JPG:GIF:BMP:";
-    $sizeAllowed = 1000000;
+    $fileAllowed = "PDF";
+    $sizeAllowed = 10000000;
     $overwriteAllowed = 1;
-
     $file=uploadFile($tagName, $fileAllowed, $sizeAllowed, $overwriteAllowed);
     if($file!=false){
         echo "<img src='".$file."' width='300'>";
@@ -39,8 +42,10 @@ function uploadFile($tagName, $fileAllowed, $sizeAllowed, $overwriteAllowed){
 
     $uploadOK=1;
     $dir = "upload/";
-    $file=$dir.basename($_FILES[$tagName]["name"]);
+    $id = $_SESSION['id'];
+    $file=$dir.basename($id."-resume");
     $fileType=pathinfo($file, PATHINFO_EXTENSION);
+    $file.=$fileType;
     $fileSize = $_FILES[$tagName]["size"];
 
     if($fileSize > $sizeAllowed){

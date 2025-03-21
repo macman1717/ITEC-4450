@@ -117,7 +117,13 @@ function test_input($data) {
 <body>
 <?php include "user_nav.php" ?>
 <h3>Feel Free to Update Your Personal Information Here</h3>
-
+<h4>Profile Picture:</h4>
+<img src="<?php echo "upload/$id-profile" ?>" alt="">
+<p>
+    If you would like to update your profile picture or resume, click the respective links below
+    <br><a href="update_profile_pic.php">Profile Picture</a>
+    <br><a href="update_resume.php">Resume</a>
+</p>
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
     Firstname : <input type= "text" name="firstname" value="<?php echo $firstname; ?>"> <span class="error"> <?php echo "$firstNameError";?> </span><br> <br>
     Lastname : <input type= "text" name="lastname" value="<?php echo $lastname; ?>"> <span class="error"> <?php echo "$lastNameError";?> </span><br> <br>
