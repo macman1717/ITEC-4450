@@ -9,10 +9,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $email = mysqli_real_escape_string($dbc, trim($_POST['email']));
     $phone = mysqli_real_escape_string($dbc, trim($_POST['phone']));
     $level = mysqli_real_escape_string($dbc, trim($_POST['level']));
-    $password = mysqli_real_escape_string($dbc, trim($_POST['password']));
+
 
     $sql = "UPDATE users SET firstname='$firstname', lastname='$lastname', email='$email', phone='$phone', 
-                 level='$level', password='$password' WHERE id=$id";
+                 level='$level' WHERE id=$id";
 
     $dbc->query($sql);
     if(mysqli_affected_rows($dbc) == 1){

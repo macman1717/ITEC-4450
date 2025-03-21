@@ -29,7 +29,6 @@ if($num_rows == 1){
     $dbemail = $row["email"];
     $dbphone = $row["phone"];
     $dblevel = $row["level"];
-    $dbpassword = $row["password"];
 
 }else{
     echo "Something went wrong!";
@@ -44,7 +43,6 @@ if($num_rows == 1){
     Email: <input type="text" name="email" value="<?php echo $dbemail; ?>"> <br> <br>
     Phone: <input type="text" name="phone" value="<?php echo $dbphone; ?>"> <br> <br>
     Level: <input type="text" name="level" value="<?php echo $dblevel; ?>"> <br> <br>
-    Password: <input type="text" name="password" value="<?php echo $dbpassword; ?>"> <br> <br>
 
     <input type="submit" name="edit" value="CONFIRM EDIT">
 </form>
