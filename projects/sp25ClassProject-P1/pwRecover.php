@@ -8,7 +8,7 @@ if(isset($_POST["email"])){
     if($result->num_rows > 0){
         $row = $result->fetch_assoc();
         $firstName = $row["firstname"];
-        $lastName = $row["lastlame"];
+        $lastName = $row["lastname"];
 
         $subject = "Password Reset";
         $msg = "Hello $firstName $lastName, You have requested to reset your password.\r\n".
