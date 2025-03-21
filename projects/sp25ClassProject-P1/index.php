@@ -15,25 +15,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $pw = test_input($_POST["pw"]);
 
     include "connection.php";
-    $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$pw'";
+    $sql = "SELECT * FROM users WHERE email = '$email';";
     $result = mysqli_query($dbc, $sql);
     $numrows = mysqli_num_rows($result);
     if($numrows == 1){
         $row = mysqli_fetch_array($result);
-        $loginMessage = "login success, welcome to our site ".$row['firstname'];
-        $dbfirstname=$row['firstname'];
-        $user_type = $row['user_type'];
-        $_SESSION['id'] = $row['id'];
-        $_SESSION["email"] = $email;
-        $_SESSION["firstname"] = $dbfirstname;
-        mysqli_close($dbc);
-        if($user_type==0){
-            header("Location:admin_home.php");
-        }else{
-            header("location:user_home.php");
-        }
+        if(password_verify($pw, $row['password'])){
+            $loginMessage = "login success, welcome to our site ".$row['firstname'];
+            $dbfirstname=$row['firstname'];
+            $user_type = $row['user_type'];
+            $_SESSION['id'] = $row['id'];
+            $_SESSION["email"] = $email;
+            $_SESSION["firstname"] = $dbfirstname;
+            mysqli_close($dbc);
+            if($user_type==0){
+                header("Location:admin/admin_home.php");
+            }else{
+                header("location:user/user_home.php");
+            }
 
-        exit();
+            exit();
+        }else{
+            $loginMessage = "Invalid username or password";
+        }
     }else{
         $loginMessage = "Invalid username or password"; //purposely ambiguous for security reasons
     }
@@ -55,7 +59,7 @@ ob_end_flush();
 <?php echo "<h2>$loginMessage</h2>"?>
 <h1>Welcome to Jimmy's Free Online Testing Site</h1>
 <p>If you already have an account with us, please log in.</p>
-<p>Otherwise, please <a href="activity8-updated.php">sign up.</a></p>
+<p>Otherwise, please <a href="user/registration.php">sign up.</a></p>
 
 
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">

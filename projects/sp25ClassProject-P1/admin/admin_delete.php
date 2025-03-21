@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../../hands-on/hands-on-styles/activity-7.css">
+    <link rel="stylesheet" href="../../../hands-on/hands-on-styles/activity-7.css">
     <meta charset="UTF-8">
     <title>Activity 10 - Admin Manage Users</title>
     <style>
@@ -29,7 +29,7 @@ if ($num_rows == 1) {
 }
 ?>
 
-<form action="delete.php" method="post">
+<form action="../delete.php" method="post">
     ID: <input type="text" name="id" value="<?php echo $id?>"><br>
     First name: <input type="text" name="firstname" value="<?php echo $dbfirstname;?>"><br>
     Last name: <input type="text" name="lastname" value="<?php echo $dblastname;?>"><br>

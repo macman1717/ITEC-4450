@@ -2,8 +2,6 @@
 session_start();
 $id = $_SESSION['id'];
 $firstname = $_SESSION['firstname'];
-
-echo "ID of this user is $id <br>";
 ?>
 
 <html>

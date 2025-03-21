@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../../hands-on/hands-on-styles/activity-7.css">
+    <link rel="stylesheet" href="../../../hands-on/hands-on-styles/activity-7.css">
     <meta charset="UTF-8">
     <title>Activity 12 - Admin Edit User</title>
     <style>
@@ -37,7 +37,7 @@ if($num_rows == 1){
 ?>
 
 <h3>Please update the user information below</h3>
-<form action="edit.php" method="post">
+<form action="../edit.php" method="post">
     <input type="hidden" name="id" value="<?php echo $dbid; ?>"> <br> <br>
     First Name: <input type="text" name="firstname" value="<?php echo $dbfirstname; ?>"> <br> <br>
     Last Name: <input type="text" name="lastname" value="<?php echo $dblastname; ?>"> <br> <br>
