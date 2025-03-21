@@ -70,7 +70,6 @@ while($row = mysqli_fetch_array($result)){
 
 ?>
 <p>
-    <?php echo $sql ?>
 </p>
 </body>
 </html>

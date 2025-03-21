@@ -25,8 +25,14 @@ if(isset($_POST['submit'])){
     <body>
     <h1>Update Resume</h1>
     <h3>Current Resume</h3>
-    <embed frameborder="0" type='application/pdf' src='upload/<?php echo $_SESSION['id'] ?>-resume#toolbar=0' width='400' height='500'>
-    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="multipart/form-data">
+    <?php
+    $filename = "upload/" . $_SESSION['id'] . "-resume";
+    if (file_exists($filename)) {
+        echo "<embed frameborder='0' type='application/pdf' src='$filename#toolbar=0' width='400' height='500'>";
+    } else {
+        echo "<p>Resume not found. Please upload your resume.</p>";
+    }
+    ?>    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="multipart/form-data">
         Select a PDF file to upload: <input type="file" name="myPdf"> <br> <br>
 
         <input type="submit" name="submit" value="UPLOAD">

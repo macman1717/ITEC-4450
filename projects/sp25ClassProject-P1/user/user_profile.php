@@ -118,10 +118,23 @@ function test_input($data) {
 <?php include "user_nav.php" ?>
 <h3>Feel Free to Update Your Personal Information Here</h3>
 <h4>Profile Picture:</h4>
-<img src="<?php echo "upload/$id-profile" ?>" width="300">
-<h4>Resume:</h4>
-<embed frameborder="0" type='application/pdf' src='upload/<?php echo $_SESSION['id'] ?>-resume#toolbar=0' width='400' height='500'>
+<?php
+$filename = "upload/$id-profile";
+if (file_exists($filename)) {
+    echo "<img src='$filename' width='300'>";
+} else {
+    echo "<p>Profile picture not found, please upload one</p>";
+}
+?>
+<h4>Resume:</h4><?php
+$filename = "upload/" . $_SESSION['id'] . "-resume";
 
+if (file_exists($filename)) {
+    echo "<embed frameborder='0' type='application/pdf' src='$filename#toolbar=0' width='400' height='500'>";
+} else {
+    echo "<p>Resume not found. Please upload your resume.</p>";
+}
+?>
 <p>
     If you would like to update your profile picture or resume, click the respective links below
     <br><a href="update_profile_pic.php">Profile Picture</a>

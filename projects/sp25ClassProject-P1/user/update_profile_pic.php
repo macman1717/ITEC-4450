@@ -25,7 +25,15 @@ if(isset($_POST['submit'])){
 <body>
 <h1>Update New Profile Picture</h1>
 <h3>Current Profile Picture</h3>
-<img src="<?php echo "upload/".$id."-profile"; ?>" width="300">
+<?php
+$filename = "upload/$id-profile";
+
+if (file_exists($filename)) {
+    echo "<img src='$filename' width='300'>";
+} else {
+    echo "<p>Profile picture not found, please upload one</p>";
+}
+?>
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="multipart/form-data">
     Select an image to upload: <input type="file" name="myImage"> <br> <br>
     <input type="submit" name="submit" value="UPLOAD">
