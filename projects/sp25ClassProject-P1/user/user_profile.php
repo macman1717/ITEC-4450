@@ -118,7 +118,7 @@ function test_input($data) {
 <?php include "user_nav.php" ?>
 <h3>Feel Free to Update Your Personal Information Here</h3>
 <h4>Profile Picture:</h4>
-<img src="<?php echo "upload/$id-profile" ?>" alt="">
+<img src="<?php echo "upload/$id-profile" ?>" width="300">
 <p>
     If you would like to update your profile picture or resume, click the respective links below
     <br><a href="update_profile_pic.php">Profile Picture</a>
