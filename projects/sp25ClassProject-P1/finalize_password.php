@@ -15,5 +15,5 @@ if($_POST['password'] != $password_confirm){
     $dbc->query($sql);
 
     echo "Password updated!";
-    echo "<a href='index.php'>Click here</a> to go back.";
+    echo "<br><a href='index.php'>Click here</a> to go back.";
 }

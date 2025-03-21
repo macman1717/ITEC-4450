@@ -20,11 +20,11 @@ if ($num_rows > 0) {
 }
 ?>
 You should be able to update your password here.
-<form action='finalize_password.php' method='post'>";
+<form action='finalize_password.php' method='post'>
     <input type='hidden' name='email' value='<?php echo $email ?>'>
     Enter your new password: <input type='password' name='password'>
-    Confirm password: <input type='password' name='confirm_password'>
-    <input type='submit' name='submit' value='Submit'>
+    <br>Confirm password: <input type='password' name='confirm_password'>
+    <br><input type='submit' name='submit' value='Submit'>
 </form>
 </body>
 </html>
