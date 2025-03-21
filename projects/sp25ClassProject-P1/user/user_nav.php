@@ -11,7 +11,7 @@
     |
     <a href="../quiz/html-css-quiz.php"> Take HTML/CSS Quiz </a>
     |
-    <a> Check Test Result </a>
+    <a href="results.php"> Check Test Result </a>
     |
     <a href="../logout.php"> Logout</a>
 </p>

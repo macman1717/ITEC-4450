@@ -50,12 +50,9 @@ ob_end_flush();
 <head>
     <link rel="stylesheet" href="../../hands-on/hands-on-styles/activity-7.css">
     <meta charset="UTF-8">
-    <title>Activity 10</title>
+    <title>Testing Site Home</title>
 </head>
 <body>
-<h1>Activity 10 - 5 February 2025</h1>
-<p>Submitted by Connor Griffin</p>
-<hr>
 <?php echo "<h2>$loginMessage</h2>"?>
 <h1>Welcome to Jimmy's Free Online Testing Site</h1>
 <p>If you already have an account with us, please log in.</p>
