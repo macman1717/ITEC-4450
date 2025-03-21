@@ -65,6 +65,8 @@ ob_end_flush();
     <input type="submit" name="loginBtn" value="Log in">
 </form>
 
+<p>Forgot Password? <a href="forgot_password.php">Click Here</a></p>
+
 
 </body>
 </html>

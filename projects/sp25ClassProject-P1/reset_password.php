@@ -9,7 +9,7 @@ $email = $_GET['email'];
 include "connection.php";
 
 $sql = "SELECT * FROM users WHERE email='$email'";
-$result = $db->query($sql);
+$result = $dbc->query($sql);
 $num_rows = mysqli_num_rows($result);
 if ($num_rows > 0) {
 $row = $result->fetch_assoc();
