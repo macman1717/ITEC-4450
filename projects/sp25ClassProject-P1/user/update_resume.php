@@ -1,42 +1,44 @@
 <?php
 session_start();
 
+
+if(isset($_POST['submit'])){
+    $tagName = "myPdf";
+    $fileAllowed = "PDF";
+    $sizeAllowed = 10000000;
+    $overwriteAllowed = 1;
+    $file=uploadFile($tagName, $fileAllowed, $sizeAllowed, $overwriteAllowed);
+    if($file!=false){
+        header("Location:user_profile.php");
+    }else{
+        echo "Sorry, uploading of the image failed. <br>";
+    }
+}
 ?>
     <!DOCTYPE html>
     <html lang="en">
     <head>
         <link rel="stylesheet" href="../../../hands-on/hands-on-styles/activity-7.css">
         <meta charset="UTF-8">
-        <title>Profile Pic and Resume Update</title>
+        <title>Resume Update</title>
     </head>
     <body>
-    <h1>Update Profile Picture or Resume</h1>
+    <h1>Update Resume</h1>
+    <h3>Current Resume</h3>
+    <embed frameborder="0" type='application/pdf' src='upload/<?php echo $_SESSION['id'] ?>-resume#toolbar=0' width='400' height='500'>
     <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="multipart/form-data">
-        Select an image to upload: <input type="file" name="myImage"> <br> <br>
-
         Select a PDF file to upload: <input type="file" name="myPdf"> <br> <br>
 
         <input type="submit" name="submit" value="UPLOAD">
 
 
     </form>
-
+    <a href="user_profile.php">Go Back</a>
     </body>
     </html>
 
 <?php
-if(isset($_POST['submit'])){
-    $tagName = "myImage";
-    $fileAllowed = "PDF";
-    $sizeAllowed = 10000000;
-    $overwriteAllowed = 1;
-    $file=uploadFile($tagName, $fileAllowed, $sizeAllowed, $overwriteAllowed);
-    if($file!=false){
-        echo "<img src='".$file."' width='300'>";
-    }else{
-        echo "Sorry, uploading of the image failed. <br>";
-    }
-}
+
 
 function uploadFile($tagName, $fileAllowed, $sizeAllowed, $overwriteAllowed){
 

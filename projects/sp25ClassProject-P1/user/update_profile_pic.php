@@ -1,6 +1,19 @@
 <?php
 session_start();
 $id = $_SESSION['id'];
+
+if(isset($_POST['submit'])){
+    $tagName = "myImage";
+    $fileAllowed = "PNG:JPEG:JPG:GIF:BMP:";
+    $sizeAllowed = 10000000;
+    $overwriteAllowed = 1;
+    $file=uploadFile($tagName, $fileAllowed, $sizeAllowed, $overwriteAllowed);
+    if($file!=false){
+        header("Location:user_profile.php");
+    }else{
+        echo "Sorry, uploading of the image failed. <br>";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,27 +29,15 @@ $id = $_SESSION['id'];
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST" enctype="multipart/form-data">
     Select an image to upload: <input type="file" name="myImage"> <br> <br>
     <input type="submit" name="submit" value="UPLOAD">
-
-
 </form>
+
+<a href="user_profile.php">Go Back</a>
 
 </body>
 </html>
 
 <?php
-if(isset($_POST['submit'])){
-    $tagName = "myImage";
-    $fileAllowed = "PNG:JPEG:JPG:GIF:BMP:";
-    $sizeAllowed = 10000000;
-    $overwriteAllowed = 1;
-    $file=uploadFile($tagName, $fileAllowed, $sizeAllowed, $overwriteAllowed);
-    if($file!=false){
-        $id = $_SESSION['id'];
-        echo "<img src='upload/$id-profile' width='300'>";
-    }else{
-        echo "Sorry, uploading of the image failed. <br>";
-    }
-}
+
 
 function uploadFile($tagName, $fileAllowed, $sizeAllowed, $overwriteAllowed){
 
