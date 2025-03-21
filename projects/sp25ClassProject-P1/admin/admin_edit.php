@@ -16,7 +16,7 @@ include "admin_nav.php";
 $id = $_GET["id"];
 echo "The id of this user is " . $id . "<br>";
 
-include "connection.php";
+include "../connection.php";
 $sql = "SELECT * FROM users WHERE id=$id";
 echo "SQL statment is " . $sql . "<br>";
 $result = mysqli_query($dbc, $sql);
@@ -32,12 +32,12 @@ if($num_rows == 1){
     $dbpassword = $row["password"];
 
 }else{
-    echo "Somthing went wrong!";
+    echo "Something went wrong!";
 }
 ?>
 
 <h3>Please update the user information below</h3>
-<form action="../edit.php" method="post">
+<form action="edit.php" method="post">
     <input type="hidden" name="id" value="<?php echo $dbid; ?>"> <br> <br>
     First Name: <input type="text" name="firstname" value="<?php echo $dbfirstname; ?>"> <br> <br>
     Last Name: <input type="text" name="lastname" value="<?php echo $dblastname; ?>"> <br> <br>

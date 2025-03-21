@@ -15,7 +15,7 @@ include 'admin_nav.php';
 $id = $_GET['id'];
 echo "User id is: ".$id."<br>";
 
-include("connection.php");
+include("../connection.php");
 $query = "Select * from users WHERE id=$id;";
 $result = mysqli_query($dbc, $query);
 $num_rows = mysqli_num_rows($result);
@@ -29,7 +29,7 @@ if ($num_rows == 1) {
 }
 ?>
 
-<form action="../delete.php" method="post">
+<form action="delete.php" method="post">
     ID: <input type="text" name="id" value="<?php echo $id?>"><br>
     First name: <input type="text" name="firstname" value="<?php echo $dbfirstname;?>"><br>
     Last name: <input type="text" name="lastname" value="<?php echo $dblastname;?>"><br>

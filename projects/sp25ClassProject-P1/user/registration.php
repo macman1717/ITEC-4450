@@ -121,7 +121,7 @@ ob_end_flush();
     <title>Registration</title>
 </head>
 <body>
-<?php include "user_nav.php";
+<?php
 if(isset($sqs)){
     echo "<h1>".$sqs."</h1>";
 }?>
@@ -154,21 +154,7 @@ if(isset($sqs)){
 
     <input type="submit">
 </form>
-<hr>
-<h3>Testing Area: For Developer Only</h3>
-<?php
-
-echo "Data collected from the form: <br>";
-echo "First name: $firstname <br>";
-echo "Last name: $lastname <br>";
-echo "Phone num: $phone <br>";
-echo "Email: $email <br>";
-echo "Gender: $gender <br>";
-echo "Level: $level <br>";
-echo "Password1: $password1 <br>";
-echo "Password2: $password2 <br>";
-echo "# of red flags: $flag <br>";
-
-?>
+<br>
+<a href="../index.php">Go Back</a>
 </body>
 </html>

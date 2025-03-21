@@ -1,7 +1,7 @@
 <?php
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    include "connection.php";
+    include "../connection.php";
 
     $id = $_POST['id'];
     $firstname = mysqli_real_escape_string($dbc, trim($_POST['firstname']));
@@ -14,14 +14,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $sql = "UPDATE users SET firstname='$firstname', lastname='$lastname', email='$email', phone='$phone', 
                  level='$level', password='$password' WHERE id=$id";
 
-    echo "The query statement is $sql <br>";
-
-    mysqli_query($dbc, $sql);
+    $dbc->query($sql);
     if(mysqli_affected_rows($dbc) == 1){
         echo "You have successfully updated user.";
-        echo "<br>Please <a href='activity11.php'>click here</a> to go back. <br>";
+    }else if(mysqli_affected_rows($dbc) == 0) {
+        echo "There was an error updating record, no new information for the user. <br>";
     }else{
-        echo "Something went wrong with update.";
+        echo "Something went wrong with update. " . mysqli_affected_rows($dbc);
     }
+    echo "<br>Please <a href='admin_manage.php'>click here</a> to go back. <br>";
+
 }
-?>
