@@ -54,11 +54,6 @@ ob_end_flush();
 </head>
 <body>
 <?php echo "<h2>$loginMessage</h2>";
-if(isset($row)){
-    echo $row['password'] . "<br>";
-    echo "Password: $pw <br>";
-    echo "Password Verify: " . password_verify($pw, $row['password']);
-}
 ?>
 <h1>Welcome to Jimmy's Free Online Testing Site</h1>
 <p>If you already have an account with us, please log in.</p>
