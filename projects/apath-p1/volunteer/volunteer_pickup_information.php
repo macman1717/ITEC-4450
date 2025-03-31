@@ -3,15 +3,15 @@ session_start();
 
 include '../connection.php';
 $pickup_exists = false;
-$sql = "SELECT v_id, approved FROM `pickup` WHERE `s_id` = '".$_SESSION['id']."'";
+$sql = "SELECT s_id, approved FROM `pickup` WHERE `v_id` = '".$_SESSION['id']."'";
 $result = $dbc->query($sql);
 if ($result->num_rows > 0) {
     $row = $result->fetch_array();
-    $volunteer_id = $row[0];
+    $student_id = $row[0];
     $approved = $row[1];
     if($approved == 1){
         $pickup_exists = true;
-        $sql = "SELECT * FROM `apath_volunteer` WHERE `v_id` = '".$volunteer_id."'";
+        $sql = "SELECT * FROM `apath_student` WHERE `s_id` = '".$student_id."'";
         $result = $dbc->query($sql);
         $row = $result->fetch_assoc();
     }
@@ -27,15 +27,15 @@ if ($result->num_rows > 0) {
     <title>APATH - Student Pickup Information</title>
 </head>
 <body>
-<?php include 'student-nav.php'; ?>
+<?php include 'volunteer-nav.php'; ?>
 
 <div id="home-div">
-    <h1>Volunteer Pickup Information</h1>
+    <h1>Student Pickup Information</h1>
 
     <?php
     if ($pickup_exists) {
         foreach ($row as $key => $value) {
-            if($key != "v_id") {
+            if($key != "s_id") {
                 echo "<p>" . $key . ": " . $value . "</p>";
             }
         }
@@ -53,4 +53,3 @@ if ($result->num_rows > 0) {
 </footer>
 </body>
 </html>
-

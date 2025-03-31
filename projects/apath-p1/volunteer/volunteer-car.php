@@ -24,8 +24,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $_SESSION[$key] = $value;
             $data[$key] = clean($value);
             $sql .= "$key = '$data[$key]', ";
-        }else if(!is_null($_SESSION[$key])){
-            $_SESSION[$key] = $value;
+        }else if(!is_null($_POST[$key])){
+            $_SESSION[$key] = $_POST[$key];
             $data[$key] = clean($value);
             $sql .= "$key = $data[$key], ";
         }
