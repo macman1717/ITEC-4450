@@ -8,8 +8,10 @@ try {
     $s_id = $_SESSION['id'];
     $result = mysqli_query($dbc, "SELECT * FROM apath_student WHERE s_id = $s_id");
     $student = mysqli_fetch_assoc($result);
-    foreach ($student as $key => $value) {
-        $_SESSION[$key] = $value;
+    if($student != NULL) {
+        foreach ($student as $key => $value) {
+            $_SESSION[$key] = $value;
+        }
     }
 }catch (Exception $e){
     header('Location: ../index.php');

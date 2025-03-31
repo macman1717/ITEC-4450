@@ -8,8 +8,13 @@ try {
     $s_id = $_SESSION['id'];
     $result = mysqli_query($dbc, "SELECT * FROM apath_student WHERE s_id = $s_id");
     $student = mysqli_fetch_assoc($result);
-    foreach ($student as $key => $value) {
-        $_SESSION[$key] = $value;
+    $student_is_null = false;
+    if($student != NULL){
+        foreach ($student as $key => $value) {
+            $_SESSION[$key] = $value;
+        }
+    }else{
+        $student_is_null = true;
     }
 }catch (Exception $e){
     header('Location: ../index.php');
@@ -63,8 +68,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <h1>Please update information about your flight</h1>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
         <?php
-        ECHO $sql;
-
         makeTextInputField("Airport", 'airport', false);
         makeTextInputField("Flight Number", 'flight_number', false);
         makeTextInputField("Airline", 'airline', false);
@@ -77,8 +80,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         makeSelectInputField("How many pieces of small luggage will you have?", "small_luggage", $options ,false);
         ?>
         <br>
-        Departure: <input type="datetime-local" name="d_datetime" value="<?php echo $_SESSION['d_datetime'];?>">
-        Arrival: <input type="datetime-local" name="a_datetime" value="<?php echo $_SESSION['a_datetime'];?>">
+        Departure: <input type="datetime-local" name="d_datetime" value="<?php
+            if($student_is_null){
+                echo "";
+            }else{
+                echo $_SESSION['d_datetime'];
+            }
+        ?>">
+        Arrival: <input type="datetime-local" name="a_datetime" value="<?php
+        if($student_is_null){
+            echo "";
+        }else{
+            echo $_SESSION['a_datetime'];
+        }
+        ?>">
         <br>
         <input class="submit-btn" type="submit" value="Save">
     </form>
