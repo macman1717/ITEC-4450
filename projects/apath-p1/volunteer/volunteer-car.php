@@ -56,7 +56,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <h1>Please update information about your car</h1>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
         <?php
-        ECHO $sql;
         makeTextInputField("Car Make", 'car_make', false);
         makeTextInputField("Car Model", 'car_model', false);
         makeTextInputField("Year", 'car_year', false);
