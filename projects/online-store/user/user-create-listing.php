@@ -21,7 +21,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $item_description = $_POST['item_description'];
         $stock = $_POST['stock'];
         $sql = "INSERT INTO store_listings (seller_id, item_name, item_description, price, stock) values ($id, \"$item_name\", '$item_description', $price, $stock)";
-        echo $sql;
         $result = $dbc -> query($sql);
         if($result){
             header("location:./user-manage-listings.php");
