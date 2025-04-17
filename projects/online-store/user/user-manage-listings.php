@@ -16,7 +16,10 @@ $result = $dbc->query($sql);
 <body>
 <?php include 'user-nav.php'; ?>
 
-<h3>Current Listings</h3>
+
+
+<div class="container">
+    <h3>Your Current Listings</h3>
 
 <?php
 
@@ -38,8 +41,8 @@ if ($result->num_rows == 0) {
         echo "<td>" . $row["item_description"] . "</td>";
         echo "<td>" . $row["price"] . "</td>";
         echo "<td>" . $row["stock"] . "</td>";
-        echo "<td><a href='user-edit-listing.php?id=" . $row["id"] . "'>Edit</a></td>";
-        echo "<td><a href='user-delete-listing.php?id=" . $row["id"] . "'>Delete</a></td>";
+        echo "<td><a href='user-edit-listing.php?listing_id=" . $row["id"] . "'>Edit</a></td>";
+        echo "<td><a href='user-delete-listing.php?listing_id=" . $row["id"] . "'>Delete</a></td>";
         echo "</tr>";
     }
     echo "</table>";
@@ -47,7 +50,7 @@ if ($result->num_rows == 0) {
 
 
 ?>
-
+</div>
 <?php include '../footer.php'; ?>
 </body>
 </html>
