@@ -91,16 +91,18 @@ if ($form_submitted) {
     $dbc -> query($sql);
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../user/styles.css">
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <title>PHP Quiz</title>
 </head>
 <body>
 <?php include "../user/user_nav.php"; ?>
+<div class="main-wrapper">
+    <div class="container">
 <h1>PHP Quiz</h1>
 <hr>
 
@@ -121,12 +123,15 @@ if ($form_submitted) {
     $i = 0;
     foreach ($questions as $question => $answers) {
         echo "<div class='question'>";
-        echo "<h3>Question #" . ($i + 1) . " - " . $question . "</h3>";
-        echo "</div>";
-
         if ($form_submitted) {
             echo "<img src='{$img_url[$i]}' alt='Feedback Image'>";
         }
+        echo "</div><br>";
+        echo "<div class='question'>";
+        echo "<h3>Question #" . ($i + 1) . " - " . $question . "</h3>";
+        echo "</div>";
+
+
 
         echo "<br>";
 
@@ -146,6 +151,7 @@ if ($form_submitted) {
     <br>
     <input type="submit" id="submit-btn">
 </form>
-
+    </div>
+</div>
 </body>
 </html>

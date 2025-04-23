@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1a1a;
+    color: #f5e9dc;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: #2d2323;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(255, 187, 115, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #ff7e67;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #3a2f2f;
+    color: #ffa07a;
+}
+
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.container {
+    background-color: #2d2323;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(255, 187, 115, 0.15);
+}
+
+h3, h4 {
+    color: #ffbb73;
+    margin-bottom: 1rem;
+}
+
+p, a {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f5e9dc;
+}
+
+a {
+    color: #ff7e67;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffa07a;
+}
+
+img, embed {
+    display: block;
+    margin: 1rem auto;
+    border: 2px solid #403737;
+    border-radius: 8px;
+}
+
+form {
+    margin-top: 2rem;
+}
+
+input[type="text"],
+input[type="submit"],
+input[type="radio"] {
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #403737;
+    background-color: #3a2f2f;
+    color: #f5e9dc;
+}
+
+input[type="submit"] {
+    background-color: #ff7e67;
+    color: #1e1a1a;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #ffa07a;
+}
+
+form label,
+form input[type="radio"] {
+    margin-right: 10px;
+}
+
+.error {
+    color: #ff4c4c;
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background-color: #2d2323;
+    color: #f5e9dc;
+    border: 1px solid #403737;
+    box-shadow: 0 0 10px rgba(255, 187, 115, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: center;
+    border-bottom: 1px solid #403737;
+}
+
+th {
+    background-color: #403737;
+    color: #ffbb73;
+    font-size: 1.1rem;
+}
+
+tr:nth-child(even) {
+    background-color: #352a2a;
+}
+
+tr:hover {
+    background-color: #3e3232;
+}

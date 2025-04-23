@@ -1,22 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="../../../hands-on/hands-on-styles/activity-7.css">
-    <meta charset="UTF-8">
-    <title>Admin - Nav</title>
-    <style>
-        .error {color:#FF0000;}
-    </style>
-</head>
-<body>
-<p align="center">
-    <a href="admin_home.php">Home</a>
-    |
-    <a href="admin_manage.php">Manage Users</a>
-    |
-    <a href="../logout.php">Logout</a>
+<nav class="top-nav">
+    <ul>
+        <li><a href="../admin/admin_home.php">Home</a></li>
+        <li><a href="../admin/admin_manage.php">Manage Users</a></li>
+        <li><a href="../logout.php">Logout</a></li>
+    </ul>
+</nav>
 
-</p>
-
-</body>
-</html>

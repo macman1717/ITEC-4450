@@ -98,7 +98,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $sqs = "INSERT INTO users(firstname, lastname, email, phone, gender, level, password)
                 VALUES ('$firstname', '$lastname', '$email', '$phone', '$gender', '$level', '$password1');";
             $dbc->query($sqs);
-            header("Location: register_success.php");
+            header("Location: ../index.php");
         }
     }
 }
@@ -116,11 +116,13 @@ ob_end_flush();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../../../hands-on/hands-on-styles/activity-7.css">
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <title>Registration</title>
 </head>
 <body>
+<div class="main-wrapper">
+    <div class="container">
 <?php
 if(isset($sqs)){
     echo "<h1>".$sqs."</h1>";
@@ -146,15 +148,17 @@ if(isset($sqs)){
 
 
     The Total number of IT credits you have earned is:  <span class="error"> <?php echo "$levelErr";?> </span> <br>
-    <input type="radio" name="level" value="A" <?php if(isset($level) && $level=="A") echo "checked"; ?> > Less than 30 hours <br>
-    <input type="radio" name="level" value="B" <?php if(isset($level) && $level=="B") echo "checked"; ?> > More than 30 but less than 60 hours <br>
-    <input type="radio" name="level" value="C" <?php if(isset($level) && $level=="C") echo "checked"; ?> > More than 60 but less than 90 hours <br>
-    <input type="radio" name="level" value="D" <?php if(isset($level) && $level=="D") echo "checked"; ?> > More than 90 <br>
+    <input type="radio" name="level" value="Freshman" <?php if(isset($level) && $level=="Freshman") echo "checked"; ?> > Less than 30 hours <br>
+    <input type="radio" name="level" value="Sophomore" <?php if(isset($level) && $level=="Sophomore") echo "checked"; ?> > More than 30 but less than 60 hours <br>
+    <input type="radio" name="level" value="Junior" <?php if(isset($level) && $level=="Junior") echo "checked"; ?> > More than 60 but less than 90 hours <br>
+    <input type="radio" name="level" value="Senior" <?php if(isset($level) && $level=="Senior") echo "checked"; ?> > More than 90 <br>
     <br> <br>
 
     <input type="submit">
 </form>
 <br>
 <a href="../index.php">Go Back</a>
+    </div>
+</div>
 </body>
 </html>
