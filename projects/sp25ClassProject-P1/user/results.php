@@ -15,9 +15,12 @@ foreach ($result as $row) {
 <html>
 <head>
     <title>Quiz Results</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <?php include "user_nav.php"; ?>
+<div class="main-wrapper">
+    <div class="container">
 <h1> Hello <?php echo $firstname ?>, Here are you quiz results:</h1>
 <table border="1">
     <tr>
@@ -33,5 +36,7 @@ foreach ($result as $row) {
     }
     ?>
 </table>
+</div>
+</div>
 </body>
 </html>

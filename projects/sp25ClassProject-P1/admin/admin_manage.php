@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../../../hands-on/hands-on-styles/activity-7.css">
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <title>Activity 11 - Admin Manage Users</title>
     <style>
@@ -9,15 +9,17 @@
     </style>
 </head>
 <body>
-<h2>Welcome to the Admin - Manage User Page</h2>
 
+
+<?php include "admin_nav.php"; ?>
+<div class="main-wrapper">
+<div class="container">
+    <h2>Welcome to the Admin - Manage User Page</h2>
 <?php
-include "admin_nav.php";
-
 include "../connection.php";
 $sqs = "SELECT * FROM users order by firstname";
 $result = mysqli_query($dbc, $sqs);
-
+echo '<div class="table-wrapper">';
 echo "<table border='1' width='50%'>";
 echo "<tr>";
 echo "<th>edit</th>";
@@ -67,10 +69,16 @@ while($row = mysqli_fetch_array($result)){
 
     echo "</tr>";
 }
-
+echo "</table>";
 ?>
-<p>
-</p>
+<!--div from table wrapper    -->
+</div>
+    <form action="./csvForUsers.php" method="post">
+        <p>Would you like to Export this table to a CSV file?</p>
+        <input type="submit" value="submit">
+    </form>
+</div>
+</div>
 </body>
 </html>
 

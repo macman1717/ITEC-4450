@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../../../hands-on/hands-on-styles/activity-7.css">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
     <title>Activity 12 - Admin Edit User</title>
     <style>
         .error {color:#FF0000;}
     </style>
 </head>
 <body>
-<h2>Admin Edit User Page</h2>
 
+
+<?php include "admin_nav.php"; ?>
+<div class="main-wrapper">
+<div class="container">
+<h2>Admin Edit User Page</h2>
 <?php
-include "admin_nav.php";
 $id = $_GET["id"];
 echo "The id of this user is " . $id . "<br>";
 
 include "../connection.php";
 $sql = "SELECT * FROM users WHERE id=$id";
-echo "SQL statment is " . $sql . "<br>";
 $result = mysqli_query($dbc, $sql);
 $num_rows = mysqli_num_rows($result);
 if($num_rows == 1){
@@ -46,6 +48,7 @@ if($num_rows == 1){
 
     <input type="submit" name="edit" value="CONFIRM EDIT">
 </form>
-
+</div>
+</div>
 </body>
 </html>

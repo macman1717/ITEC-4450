@@ -112,10 +112,13 @@ function test_input($data) {
 <html>
 <head>
     <title>Online Test - User Update Profile</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <?php include "user_nav.php" ?>
+<div class="main-wrapper">
+    <div class="container">
 <h3>Feel Free to Update Your Personal Information Here</h3>
 <h4>Profile Picture:</h4>
 <?php
@@ -160,7 +163,9 @@ if (file_exists($filename)) {
     <br> <br>
 
     <input type="submit">
-</form>
 
+</form>
+    </div>
+</div>
 </body>
 </html>

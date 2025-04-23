@@ -10,6 +10,17 @@ function test_input($data) {
     return $data;
 }
 
+if(isset($_COOKIE['type'])){
+    $_SESSION['id'] = $_COOKIE['id_user'];
+    $_SESSION["email"] = $_COOKIE['email'];
+    $_SESSION["firstname"] = $_COOKIE['firstname'];
+    if($_COOKIE['type'] == '1'){
+        header('location: ./user/user_home.php');
+    }else{
+        header('location: ./admin/admin_home.php');
+    }
+}
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $email = test_input($_POST["email"]);
     $pw = test_input($_POST["pw"]);
@@ -27,6 +38,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $_SESSION['id'] = $row['id'];
             $_SESSION["email"] = $email;
             $_SESSION["firstname"] = $dbfirstname;
+
+            setCookie("email", $email, time() + (86400 * 7));
+            setCookie("firstname", $dbfirstname, time() + (86400 * 7));
+            setCookie('id_user', $row['id'], time() + (86400 * 7));
+            setCookie('type', $user_type, time() + (86400 * 7));
+
             mysqli_close($dbc);
             if($user_type==0){
                 header("Location:admin/admin_home.php");
@@ -48,13 +65,13 @@ ob_end_flush();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../../hands-on/hands-on-styles/activity-7.css">
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <title>Testing Site Home</title>
 </head>
 <body>
-<?php echo "<h2>$loginMessage</h2>";
-?>
+<div class="main-wrapper">
+<?php echo "<h2>$loginMessage</h2>"; ?>
 <h1>Welcome to Jimmy's Free Online Testing Site</h1>
 <p>If you already have an account with us, please log in.</p>
 <p>Otherwise, please <a href="user/registration.php">sign up.</a></p>
@@ -68,6 +85,6 @@ ob_end_flush();
 
 <p>Forgot Password? <a href="forgot_password.php">Click Here</a></p>
 
-
+</div>
 </body>
 </html>

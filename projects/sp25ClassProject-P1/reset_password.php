@@ -5,8 +5,10 @@ header('Content-Type: text/html; charset=UTF-8');
 <html>
 <head>
     <title>Reset PW</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
 <h2>Please follow the following instructions below to reset your password</h2>
 <?php
 $email = $_GET['email'];
@@ -26,5 +28,7 @@ You should be able to update your password here.
     <br>Confirm password: <input type='password' name='confirm_password'>
     <br><input type='submit' name='submit' value='Submit'>
 </form>
+    </div>
+
 </body>
 </html>
