@@ -12,6 +12,7 @@ $item_description = $row['item_description'];
 $item_price = $row['price'];
 $item_stock = $row['stock'];
 $seller_id = $row['seller_id'];
+$image_path = $row['image_path'];
 
 $sql = "SELECT * FROM store_users WHERE id = $seller_id";
 $result = $dbc->query($sql);
@@ -29,6 +30,7 @@ $seller_name = $row['first_name'] . " " . $row['last_name'];
 <div class="container">
     <?php
     echo "<h1>$item_name</h1>";
+    echo "<img src='../" . $image_path . "' width='250px; height='auto'>";
     echo "<p>$item_description</p>";
     echo "<p>Sold by: $seller_name</p>";
     echo "<p>Price: $$item_price</p>";

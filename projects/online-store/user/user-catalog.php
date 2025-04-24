@@ -22,6 +22,7 @@ if ($listingsAvailable) {
     echo "<div class=container>";
     echo "<table border='1'>";
     echo "<tr>";
+    echo "<th>Image</th>";
     echo "<th>Name</th>";
     echo "<th>Description</th>";
     echo "<th>Price</th>";
@@ -29,9 +30,12 @@ if ($listingsAvailable) {
     echo "</tr>";
     while ($row = $result->fetch_assoc()) {
         echo "<tr>";
+        echo "<td>";
+        echo "<img src='../" . $row['image_path'] . "' width='100px; height='auto'>";
+        echo "</td>";
         echo "<td><a href='user-view-listing.php?listing_id=".$row['id']."'>".$row['item_name']."</a></td>";
         echo "<td>".$row['item_description']."</td>";
-        echo "<td>".$row['price']."</td>";
+        echo "<td>$".$row['price']."</td>";
         echo "<td>".$row['stock']."</td>";
     }
     echo "</table>";

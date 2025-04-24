@@ -7,6 +7,10 @@ $result = mysqli_query($dbc, $sql);
 $row = mysqli_fetch_assoc($result);
 $name = $row['first_name'];
 $lastname = $row['last_name'];
+
+$sql = "SELECT * FROM store_announcements where status = 'shown' order by id desc;";
+$announcements = mysqli_query($dbc, $sql);
+
 ?>
 
 <html lang="UTC-8">
@@ -17,6 +21,17 @@ $lastname = $row['last_name'];
 <body>
 
 <?php include 'user-nav.php'; ?>
+<div id="container">
+    <h2>Announcements</h2>
+    <ul>
+        <?php
+        while ($row = mysqli_fetch_assoc($announcements)) {
+            echo '<li>' . $row['title'] . ': '. $row['content']. ' </li>';
+            echo '<hr>';
+        }
+        ?>
+    </ul>
+</div>
 
 <h2>User Home Page</h2>
 <h1>Welcome to GGC Online Store</h1>
